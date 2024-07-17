@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="mono" content="width=device-width, initial-scale=1.0" />
+    <script src="JS/carrito.js"></script>
+    <script src="JS/toast.js"></script>
+    <link rel="icon" href="img/LOGO.png" />
+    <title>Alimentos Santiago | Inicio.</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="cards.css" />
+    <link rel="stylesheet" href="owl.carousel.min.css" />
+    <link rel="stylesheet" href="owl.theme.default.min.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body style="background-color: #24252a">
+    <div
+      class="alert alert-info alert-dismissible fade show"
+      style="margin: 0%; text-align: center"
+      role="alert"
+    >
+      INICIA SESIÓN!
+      <strong>Para así tener una mejor experiencia en la página</strong
+      ><button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+      ></button>
+    </div>
+    <!-- Esta es la NavBar -->
+    <nav
+      class="navbar sticky-top navbar-expand-lg bg-dark border-bottom bg-body-tertiary border-body"
+      data-bs-theme="dark"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="img/Krab1.png" alt="Logo" />
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link fw-bold" href="index.html">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="compra.html"
+                >CARRITO: <i class=""></i
+                ><span id="numerito" class="numerito"> 0</span></a
+              >
+            </li>
+            <li>
+              <a class="nav-link" href="envivo.html">EN VIVO</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                INFO
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="info.html">Sobre nosotros</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="resena.html"
+                    >Haznos una reseña</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Up</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <a class="btn btn-primary" href="login.html" role="button"
+            >Registro</a
+          >
+        </div>
+      </div>
+    </nav>
+    <main>
+      <!-- Aqui estan las cards de los productos-->
+      <div
+        class="card-container row row-cols-1 row-cols-md-2 row-cols-lg-3 g-0 py-5 mt-5"
+      >
+        <div class="card" style="width: 32rem">
+          <img
+            src="img/comia/1_Pesto_spaghetti_Vivera.jpg"
+            alt="Krabby Patty"
+          />
+          <div class="card-body">
+            <h3 class="card-title">Fideos al pesto</h3>
+              <strong>Ingredientes:</strong>
+              <ul>
+                <li>Fideos</li>
+                <li>Pollo</li>
+                <li>Champiñones</li>
+                <li>Albahaca fresca</li>
+                <li>Aceite de oliva</li>
+                <li>Ajo, sal y pimienta recién molida</li>
+                <br>
+                aporta energía mediante carbohidratos y proteínas, esenciales para el crecimiento y reparación de tejidos. Además, ofrece fibra, vitaminas del grupo B, antioxidantes y minerales como selenio y cobre, que mejoran el metabolismo, fortalecen el sistema inmunológico, protegen contra el daño celular y apoyan la salud ósea.</p>
+                <p>Precio: $6800</p>
+            <button class="producto-Agregar" data-producto="Krabby Patty">
+              Agregar
+            </button>
+          </div>
+        </div>
+        <div
+          class="toast-container position-fixed bottom-0 end-0 p-3"
+          style="z-index: 14"
+        >
+          <div
+            id="toast"
+            class="toast hide"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <div class="toast-header">
+              <strong class="me-auto">Aviso</strong>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="toast"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="toast-body">Su producto se ha agregado al carrito.</div>
+          </div>
+        </div>
+        <div class="card" style="width: 32rem">
+          <img src="img/comia/Arroz-chaufa-edit-2.jpg" alt="Krabby Patty" />
+          <div class="card-body">
+            <h3 class="card-title">Arroz chaufa</h3>
+            <strong>Ingredientes:</strong>
+            <ul>
+              <li>Pollo</li>
+              <li>Arroz</li>
+              <li>Diente de dragon</li>
+              <li>Coliflor</li>
+              <li>Cebollin</li>
+              <li>Arbjeas y salsa de soya</li>
+              <br>
+              Este plato aporta proteínas, carbohidratos, vitaminas y minerales esenciales. La fibra mejora la digestión y la saciedad, mientras que las vitaminas B, antioxidantes y minerales refuerzan el sistema inmunológico, la salud ósea y celular, y el metabolismo, ofreciendo una dieta equilibrada y potenciando el bienestar general.</ul>
+              <p>Precio: $6800</p>
+            <button class="producto-Agregar">Agregar</button>
+          </div>
+        </div>
+        <div class="card" style="width: 32rem">
+          <img
+            src="img/comia/bc9222ace19dee5087a4148bb48c9751.jpg"
+            alt="Krabby Patty"
+          />
+          <div class="card-body">
+            <h3 class="card-title">Pescado frito con papas mayo</h3>
+            <strong>Ingredientes:</strong>
+            <ul>
+              <li>Sal</li>
+              <li>Cebolla</li>
+              <li>Limon</li>
+              <li>Cilantro</li>
+              <li>Papas mayo</li>
+              <li>Pescado frito</li>
+              <br>
+              combinación nutritiva que aporta energía, proteínas, ácidos grasos omega-3, antioxidantes y vitaminas esenciales, favoreciendo la salud del corazón, la digestión y el bienestar general.</ul>
+              <br>
+              <p>Precio: $5950</p>
+            <button class="producto-Agregar">Agregar</button>
+          </div>
+        </div>
+        <div class="card" style="width: 32rem">
+          <img src="img/comia/buddha-bowl.jpg" alt="Krabby Patty" />
+          <div class="card-body">
+            <h3 class="card-title">Gohan vegano</h3>
+            <strong>Ingredientes:</strong>
+            <ul>
+              <li>Toffu</li>
+              <li>cuscus</li>
+              <li>Brocoli</li>
+              <li>Garbanzos</li>
+              <li>Palta</li>
+              <li>Zanahoria, lechuga española y tomate cherry</li>
+              <br>
+              Este plato es rico en fibra, proteínas vegetales, vitaminas, minerales, ácidos grasos saludables y antioxidantes, promoviendo una digestión saludable, fortaleciendo los tejidos y el sistema inmunológico, y protegiendo la salud cardiovascular y celular en general.</ul>
+              <p>Precio: $6890</p>
+            <button class="producto-Agregar">Agregar</button>
+          </div>
+        </div>
+        <div class="card" style="width: 32rem">
+          <img
+            src="img/comia/cazuela-de-vacuno-foto-principal.jpg"
+            alt="Krabby Patty"
+          />
+          <div class="card-body">
+            <h3 class="card-title">Cazuela de vacuno</h3>
+            <strong>Ingredientes:</strong>
+            <ul>
+              <li>Vacuno</li>
+              <li>Papa</li>
+              <li>Zapallo</li>
+              <li>Sal</li>
+              <li>Cilantro</li>
+              <li>Fideos</li>
+              <br>
+              Es una excelente fuente de proteínas de alta calidad para la reparación de tejidos y el mantenimiento muscular, además de proporcionar una variedad de vitaminas y minerales como vitamina A, C y complejo B, esenciales para la salud general.</ul>
+              <p>Precio: $5950</p>
+            <button class="producto-Agregar">Agregar</button>
+          </div>
+        </div>
+        <div class="card" style="width: 32rem">
+          <img
+            src="img/comia/Guatitas-a-la-jardinera07.jpg"
+            alt="Krabby Patty"
+          />
+          <div class="card-body">
+            <h3 class="card-title">Guatitas a la jardinera</h3>
+            <strong>Ingredientes:</strong>
+            <ul>
+              <li>Guatitas</li>
+              <li>Arroz</li>
+              <li>Cebolla</li>
+              <li>Zanahoria</li>
+              <li>Ajo</li>
+              <li>Arbjeas, salsa de tomate y Pimenton</li>
+              <br>
+              este plato puede aportar proteínas, carbohidratos , vitaminas y minerales . Es un plato energético que puede ser parte de una dieta balanceada si se consume en porciones adecuadas.</p>
+              <p>Precio: $10450</p>
+            <button class="producto-Agregar">Agregar</button>
+          </div>
+        </div>
+        <div class="card" style="width: 32rem">
+          <img src="img/comia/pastel-de-papas.jpg" alt="Krabby Patty" />
+          <div class="card-body">
+            <h3 class="card-title">Pastel de papas</h3>
+            <strong>Ingredientes:</strong>
+            <ul>
+              <li>Papas</li>
+              <li>Vacuno</li>
+              <li>Sal</li>
+              <li>Aceite</li>
+              <li>Oregano</li>
+              <li>Aceituna</li>
+              <br>
+              aportan carbohidratos para la energía y fibra que favorece la digestión. El aceite proporciona grasas saludables que son importantes para la absorción de vitaminas liposolubles y para la salud del corazón. En conjunto, estos ingredientes ofrecen una combinación equilibrada de nutrientes esenciales para una alimentación satisfactoria y nutritiva.</p>
+              <p>Precio: $7990</p>
+            <button class="producto-Agregar">Agregar</button>
+          </div>
+        </div>
+        <div class="card" style="width: 32rem">
+          <img src="img/comia/unnamed.jpg" alt="Krabby Patty" />
+          <div class="card-body">
+            <h3 class="card-title">Pure con carne mechada</h3>
+            <strong>Ingredientes:</strong>
+            <ul>
+              <li>Papas</li>
+              <li>Vacuno</li>
+              <li>Sal</li>
+              <li>Aceite</li>
+              <li>Oregano</li>
+              <li>Zanahoria</li>
+              <br>
+            proporciona proteínas importantes para la estructura muscular, el aceite añade grasas saludables para el corazón y el orégano no solo realza el sabor, sino que también contribuye con antioxidantes beneficiosos para la salud. Esta combinación nutritiva ofrece una comida satisfactoria y equilibrada.</p>
+            <p>Precio: $8480</p>
+            <button class="producto-Agregar">Agregar</button>
+          </div>
+        </div>
+        <div class="card" style="width: 32rem">
+          <img src="img/comia/Untitled.jpg" alt="Krabby Patty" />
+          <div class="card-body">
+            <h3 class="card-title">Arroz con pollo</h3>
+            <strong>Ingredientes:</strong>
+            <ul>
+              <li>Pollo</li>
+              <li>Arroz</li>
+              <li>Cebolla</li>
+              <li>Zanahoria</li>
+              <li>Ajo</li>
+              <li>Pimenton</li>
+              <br>
+              este plato ofrece proteínas , carbohidratos , y una variedad de vitaminas y minerales . Es una comida reconfortante que también puede ser nutritiva.</p>
+            <p>Precio: $5440</p>
+            <button class="producto-Agregar">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Aquí esta el footer-->
+    <footer
+      class="text-center text-lg-start text-white"
+      style="background-color: #1c2331"
+    >
+      <!-- Section: Social media -->
+      <section
+        class="d-flex justify-content-between p-4"
+        style="background-color: #6351ce"
+      >
+        <!-- Left -->
+        <div class="me-5">
+          <span>Conéctate con nosotros en nuestras redes sociales:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+          <a
+            href="https://www.facebook.com/bobesponja/?brand_redir=42798291365"
+            class="text-white me-4"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="https://twitter.com/SpongeBob" class="text-white me-4">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a
+            href="https://www.google.com/search?client=firefox-b-d&q=sponge+bob"
+            class="text-white me-4"
+          >
+            <i class="bi bi-google"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/spongebob/"
+            class="text-white me-4"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/christopher-villarroel-arriola-81ba4b173/"
+            class="text-white me-4"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="https://github.com/gl0w-w" class="text-white me-4">
+            <i class="bi bi-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold">Alimentos Santiago</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+              />
+              <p>
+                Todos los derechos reservados. No se permite la reproducción
+                total o parcial de este producto, ni su incorporación a un
+                sistema informático, ni su tranmisión en cualquier forma o por
+                cualquier medio sin autorización previa y por escrito de los
+                títulares del copyright. La infracción de dichos derechos puede
+                constituir en un delito contra la propiedad intelectual.
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Productos</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+              />
+              <p>
+                <a href="index.html" class="text-white">Comida</a>
+              </p>
+              <p>
+                <a href="https://www.spongebobshop.com/" class="text-white"
+                  ></a
+                >
+              </p>
+            </div>
+            <!-- Grid column -->
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Links útiles</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+              />
+              <p>
+                <a
+                  href="https://maps.app.goo.gl/tyiUvZdxw7MoX6Qc9"
+                  class="text-white"
+                  >Ubicación</a
+                >
+              </p>
+              <p>
+                <a href="login.html" class="text-white">Registro</a>
+              </p>
+              <p>
+                <a
+                  href="https://www.youtube.com/watch?v=4Ox-vYu9Ee8"
+                  class="text-white"
+                  >nose</a
+                >
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Contacto</h6>
+              <hr
+                class="mb-4 mt-0 d-inline-block mx-auto"
+                style="width: 60px; background-color: #7c4dff; height: 2px"
+              />
+              <p>
+                <i class="fas fa-home mr-3"></i> Aillavilú 1030, 8320006 Santiago, Región Metropolitana
+              </p>
+              <p>
+                <i class="fas fa-envelope mr-3"></i> elpepecontacto@gmail.com
+              </p>
+              <p><i class="fas fa-phone mr-3"></i> 9 7923 5043</p>
+              <p><i class="fas fa-print mr-3"></i> (2) 2354 0300</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 1999 Copyright:
+        <a class="text-white" href="#">Tusca</a>
+      </div>
+    </footer>
+
+    <!-- Aquí estan los scripts-->
+    <script src="JS/jquery.min.js"></script>
+    <script src="JS/owl.carousel.min.js"></script>
+    <script src="JS/main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
